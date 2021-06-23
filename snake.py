@@ -43,6 +43,9 @@ class Snake:
     def right(self):
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
+    def extend_snake(self):
+        self.create_snake(self.parts[-1].position())
+
 
 
 
