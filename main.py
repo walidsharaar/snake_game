@@ -31,5 +31,10 @@ while game_is_on:
     # detect food collision
     if snake.head.distance(snake_food)<15:
         snake_food.refresh_location()
+    # detect wall collision
+
+    if snake.head.xcor()>280 or snake.head.xcor()<-280 or snake.head.ycor()>280 or snake.head.ycor()<-280:
+        game_is_on=False
+
 
 screen.exitonclick()
